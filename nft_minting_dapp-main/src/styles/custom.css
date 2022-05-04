@@ -1,0 +1,60 @@
+
+.carousel-five-images{
+	position: relative;
+}
+.carousel-five-images img {
+  width: 400px;
+  height: 400px;
+  z-index: 9;
+}
+.carousel-five-images .changing {
+	position:absolute;
+	opacity:0;
+	top:0;
+	left:0;
+}
+.carousel-five-images .two{
+	animation:animate-five-two 10s infinite forwards ;
+}
+.carousel-five-images .three{
+	animation:animate-five-three 10s infinite forwards ;
+}
+.carousel-five-images .four{
+	animation:animate-five-four 10s infinite forwards ;
+}
+.carousel-five-images .five{
+	animation:animate-five-five 10s infinite forwards ;
+}
+
+@keyframes animate-five-two
+{
+    0%	{opacity:0;}
+    15% {opacity:0;}
+    20% {opacity:1;}
+    90% {opacity:1;}
+    95% {opacity:0;}
+}
+@keyframes animate-five-three
+{
+    0% {opacity:0;}
+    35% {opacity:0;}
+    40% {opacity:1;}
+    90% {opacity:1;}
+    95% {opacity:0;}
+}
+@keyframes animate-five-four
+{
+    0% {opacity:0;}
+    55% {opacity:0;}
+    60% {opacity:1;}
+    90% {opacity:1;}
+    95% {opacity:0;}
+}
+@keyframes animate-five-five
+{
+    0% {opacity:0;}
+    75% {opacity:0;}
+    80% {opacity:1;}
+    95% {opacity:1;}
+    100% {opacity:0;}
+}
