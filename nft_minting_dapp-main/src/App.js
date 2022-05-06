@@ -42,8 +42,10 @@ const faqData = {
 export const StyledButton = styled.button`
   padding: 16px;
   border-radius: 4px;
+  font-size: 16px;
   border: none;
   font-weight: bold;
+  font-family: "Poppins", sans-serif;
   color: white;
   width: 200px;
   cursor: pointer;
@@ -300,11 +302,11 @@ function App() {
                       1 {CONFIG.SYMBOL} costs {CONFIG.DISPLAY_COST}{" "}
                       {CONFIG.NETWORK.SYMBOL}
                     </s.TextTitle>
-                    <s.TextDescription
+                    {/* <s.TextDescription
                       style={{ fontSize: 11, }}
                     >
-                      Excluding gas fees
-                    </s.TextDescription>
+                      (excluding gas fees)
+                    </s.TextDescription> */}
                     <s.SpacerSmall />
                     {blockchain.account === "" ||
                     blockchain.smartContract === null ? (
@@ -423,6 +425,45 @@ function App() {
               </div>
             </s.Container>
           </ResponsiveWrapper>
+        </s.Container>
+        <s.SpacerLarge />
+        <s.Container style={{flexDirection:"row"}} ai={"center"}>
+          <h2 class="mintingTitle">
+            Minting Schedule:
+          </h2>
+          <s.Container flex={1} ai={"center"}>
+            <s.Container>
+              <h3>1-500</h3>
+              <h4>Free</h4>
+            </s.Container>
+          </s.Container>
+          <s.Container  flex={1} ai={"center"}>
+            <s.Container>
+            <h3>501-2000</h3>
+            <h4>0.005 ETH</h4>
+            </s.Container>
+          </s.Container>
+          <s.Container  flex={1} ai={"center"}>
+          <s.Container>
+          <h3>2001-5000</h3>
+            <h4>0.01 ETH</h4>
+              </s.Container>
+
+          </s.Container>
+          <s.Container  flex={1} ai={"center"}>
+          <s.Container>
+          <h3>5001-9000</h3>
+            <h4>0.05 ETH</h4>
+              </s.Container>
+            
+          </s.Container>
+          <s.Container  flex={1} ai={"center"}>
+          <s.Container>
+          <h3>9001-10000</h3>
+            <h4>0.2 ETH</h4>
+              </s.Container>
+              
+          </s.Container>
         </s.Container>
         <s.SpacerLarge />
         <s.SpacerLarge />
