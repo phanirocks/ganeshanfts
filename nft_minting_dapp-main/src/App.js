@@ -5,9 +5,39 @@ import { fetchData } from "./redux/data/dataActions";
 import * as s from "./styles/globalStyles";
 import styled from "styled-components";
 import "./styles/custom.css";
+import Faq from "react-faq-component";
 
 const truncate = (input, len) =>
   input.length > len ? `${input.substring(0, len)}...` : input;
+
+const faqData = {
+    title: "FAQ (How it works)",
+    rows: [
+        {
+            title: "Lorem ipsum dolor sit amet,",
+            content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean vel turpis feugiat,
+              ultricies metus at, consequat velit. Curabitur est nibh, varius in tellus nec, mattis pulvinar metus.
+              In maximus cursus lorem, nec laoreet velit eleifend vel. Ut aliquet mauris tortor, sed egestas libero interdum vitae.
+              Fusce sed commodo purus, at tempus turpis.`,
+        },
+        {
+            title: "Nunc maximus, magna at ultricies elementum",
+            content:
+                "Nunc maximus, magna at ultricies elementum, risus turpis vulputate quam, vitae convallis ex tortor sed dolor.",
+        },
+        {
+            title: "Curabitur laoreet, mauris vel blandit fringilla",
+            content: `Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc, ac sagittis leo elit vel lorem.
+            Fusce tempor lacus ut libero posuere viverra. Nunc velit dolor, tincidunt at varius vel, laoreet vel quam.
+            Sed dolor urna, lobortis in arcu auctor, tincidunt mattis ante. Vivamus venenatis ultricies nibh in volutpat.
+            Cras eu metus quis leo vestibulum feugiat nec sagittis lacus.Mauris vulputate arcu sed massa euismod dignissim. `,
+        },
+        {
+            title: "What is the package version",
+            content: <p>current version is 1.2.1</p>,
+        },
+    ],
+};
 
 export const StyledButton = styled.button`
   padding: 16px;
@@ -94,6 +124,7 @@ export const StyledLink = styled.a`
 export const StyledTitle = styled.h1`
   font-size: 36px;
   font-weight: bold;
+  margin-bottom: 12px;
 `;
 
 function App() {
@@ -101,7 +132,7 @@ function App() {
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
   const [claimingNft, setClaimingNft] = useState(false);
-  const [feedback, setFeedback] = useState(`Click buy to mint your NFT.`);
+  const [feedback, setFeedback] = useState(``);
   const [mintAmount, setMintAmount] = useState(1);
   const [CONFIG, SET_CONFIG] = useState({
     CONTRACT_ADDRESS: "",
@@ -209,6 +240,7 @@ function App() {
               <StyledTitle>
                 Goodluck Ganeshas
               </StyledTitle>
+              <h3 style={{fontSize: 14, fontWeight: "normal", fontStyle: "italic"}}>"Ganesha: The God of Wisdom, New Beginnings, and Luck, Remover of Obstacles"</h3>
               <s.SpacerSmall />
               <s.TextDescription
                   style={{
@@ -223,22 +255,20 @@ function App() {
               <s.SpacerLarge />
               <s.Container
               flex={2}
-              jc={"center"}
-              ai={"center"}
               style={{
-                backgroundColor: "#f5f5f5",
-                padding: 24,
+                border: "2px dashed #e5e5e5",
+                padding: 36,
+                paddingBottom: 24,
                 borderRadius: 8
               }}
             >
                 <s.TextTitle
                   style={{
-                    textAlign: "center",
-                    fontSize: 50,
+                    fontSize: 30,
                     fontWeight: "bold",
                   }}
                 >
-                  {data.totalSupply} / {CONFIG.MAX_SUPPLY}
+                  {data.totalSupply} / {CONFIG.MAX_SUPPLY} minted
                 </s.TextTitle>
                 {/* <s.TextDescription
                   style={{
@@ -253,14 +283,10 @@ function App() {
                 <s.SpacerSmall />
                 {Number(data.totalSupply) >= CONFIG.MAX_SUPPLY ? (
                   <>
-                    <s.TextTitle
-                      style={{ textAlign: "center" }}
-                    >
+                    <s.TextTitle>
                       The sale has ended.
                     </s.TextTitle>
-                    <s.TextDescription
-                      style={{ textAlign: "center" }}
-                    >
+                    <s.TextDescription>
                       You can still find {CONFIG.NFT_NAME} on
                     </s.TextDescription>
                     <s.SpacerSmall />
@@ -270,22 +296,19 @@ function App() {
                   </>
                 ) : (
                   <>
-                    <s.TextTitle
-                      style={{ textAlign: "center" }}
-                    >
+                    <s.TextTitle>
                       1 {CONFIG.SYMBOL} costs {CONFIG.DISPLAY_COST}{" "}
-                      {CONFIG.NETWORK.SYMBOL}.
+                      {CONFIG.NETWORK.SYMBOL}
                     </s.TextTitle>
-                    <s.SpacerXSmall />
                     <s.TextDescription
-                      style={{ textAlign: "center" }}
+                      style={{ fontSize: 11, }}
                     >
-                      Excluding gas fees.
+                      Excluding gas fees
                     </s.TextDescription>
                     <s.SpacerSmall />
                     {blockchain.account === "" ||
                     blockchain.smartContract === null ? (
-                      <s.Container ai={"center"} jc={"center"}>
+                      <s.Container>
                         {/* <s.TextDescription
                           style={{
                             textAlign: "center",
@@ -302,16 +325,12 @@ function App() {
                             getData();
                           }}
                         >
-                          CONNECT
+                          Connect Wallet
                         </StyledButton>
                         {blockchain.errorMsg !== "" ? (
                           <>
                             <s.SpacerSmall />
-                            <s.TextDescription
-                              style={{
-                                textAlign: "center",
-                              }}
-                            >
+                            <s.TextDescription>
                               {blockchain.errorMsg}
                             </s.TextDescription>
                           </>
@@ -319,15 +338,11 @@ function App() {
                       </s.Container>
                     ) : (
                       <>
-                        <s.TextDescription
-                          style={{
-                            textAlign: "center",
-                          }}
-                        >
+                        <s.TextDescription>
                           {feedback}
                         </s.TextDescription>
                         <s.SpacerMedium />
-                        <s.Container ai={"center"} jc={"center"} fd={"row"}>
+                        <s.Container fd={"row"}>
                           <StyledRoundButton
                             style={{ lineHeight: 0.4 }}
                             disabled={claimingNft ? 1 : 0}
@@ -339,11 +354,7 @@ function App() {
                             -
                           </StyledRoundButton>
                           <s.SpacerMedium />
-                          <s.TextDescription
-                            style={{
-                              textAlign: "center",
-                            }}
-                          >
+                          <s.TextDescription>
                             {mintAmount}
                           </s.TextDescription>
                           <s.SpacerMedium />
@@ -358,7 +369,7 @@ function App() {
                           </StyledRoundButton>
                         </s.Container>
                         <s.SpacerSmall />
-                        <s.Container ai={"center"} jc={"center"} fd={"row"}>
+                        <s.Container fd={"row"}>
                           <StyledButton
                             disabled={claimingNft ? 1 : 0}
                             onClick={(e) => {
@@ -367,7 +378,7 @@ function App() {
                               getData();
                             }}
                           >
-                            {claimingNft ? "BUSY" : "BUY"}
+                            {claimingNft ? "Busy" : "Buy"}
                           </StyledButton>
                         </s.Container>
                       </>
@@ -375,32 +386,34 @@ function App() {
                   </>
                 )}
                 <s.SpacerMedium />
-              </s.Container>
-              <s.Container jc={"center"} ai={"center"} style={{ padding: 12, paddingLeft: 8 }}>
-                <s.TextDescription
-                  style={{
-                    fontSize: 11,
-                    color: "var(--primary-text)",
-                  }}
-                >
-                  Please make sure you are connected to the right network (
-                  {CONFIG.NETWORK.NAME} Mainnet) and the correct address. Please note:
-                  Once you make the purchase, you cannot undo this action.
-                </s.TextDescription>
-                <s.SpacerSmall />
-                <s.TextDescription
-                  style={{
-                    fontSize: 11,
-                    color: "var(--primary-text)",
-                  }}
-                >
-                  We have set the gas limit to {CONFIG.GAS_LIMIT} for the contract to
-                  successfully mint your NFT. We recommend that you don't lower the
-                  gas limit.
-                </s.TextDescription>
+                <s.Container>
+                  <s.TextDescription
+                    style={{
+                      fontSize: 10,
+                      color: "var(--primary-text)",
+                    }}
+                  >
+                    Please make sure you are connected to the right network (
+                    {CONFIG.NETWORK.NAME} Mainnet) and the correct address. Once you make the purchase, you cannot undo this action.
+                    We have also set the gas limit to {CONFIG.GAS_LIMIT} for the contract to
+                    successfully mint your NFT. We recommend that you don't lower the gas limit.
+                  </s.TextDescription>
+                </s.Container>
               </s.Container>
             </s.Container>
-            <s.Container flex={1} jc={"center"} ai={"center"}>
+            <s.Container style={{position:"relative"}} flex={1} jc={"center"} ai={"center"}>
+              <div id="background-wrap">
+                <div class="x1"><img src="https://cdn-icons-png.flaticon.com/512/346/346167.png" /></div>
+                <div class="x2"><img src="https://cdn-icons-png.flaticon.com/512/3025/3025015.png" /></div>
+                <div class="x3"><img src="https://cdn-icons-png.flaticon.com/512/892/892917.png" /></div>
+                <div class="x4"><img src="https://cdn-icons-png.flaticon.com/512/3025/3025015.png" /></div>
+                <div class="x5"><img src="https://cdn-icons-png.flaticon.com/512/346/346167.png" /></div>
+                <div class="x6"><img src="https://cdn-icons-png.flaticon.com/512/346/346167.png" /></div>
+                <div class="x7"><img src="https://cdn-icons-png.flaticon.com/512/892/892917.png" /></div>
+                <div class="x8"><img src="https://cdn-icons-png.flaticon.com/512/3025/3025015.png" /></div>
+                <div class="x9"><img src="https://cdn-icons-png.flaticon.com/512/892/892917.png" /></div>
+                <div class="x10"><img src="https://cdn-icons-png.flaticon.com/512/346/346167.png" /></div>
+              </div>
               <div class="carousel-five-images center-block text-center">
                 <img src="/config/images/goodluck_ganesha_1.png" class="one img-responsive" />
                 <img src="/config/images/goodluck_ganesha_2.png" class="two changing img-responsive" />
@@ -416,7 +429,7 @@ function App() {
         <s.Container>
           <ResponsiveWrapper>
                 <s.Container flex={1}>
-                  <img src="/config/images/6 ganeshas.png" />
+                  <img class="sixGaneshas" src="/config/images/6 ganeshas.png" />
                 </s.Container>
                 <s.Container flex={1}>
                   Roadmap shit
@@ -447,10 +460,7 @@ function App() {
         <s.Container>
           <ResponsiveWrapper>
                 <s.Container flex={1}>
-                    <h2>FAQs</h2>
-                    <s.Container>
-                     
-                    </s.Container>
+                  <Faq data={faqData}/>
                 </s.Container>
             </ResponsiveWrapper>
         </s.Container>

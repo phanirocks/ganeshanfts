@@ -124,13 +124,13 @@ table {
 }
 
 @font-face {
-  font-family: "Work Sans";
-  src: url(Worksans.ttf);
+  font-family: "Poppins";
+  src: url(Poppins.ttf);
 }
 
 body {
   margin: 0;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
