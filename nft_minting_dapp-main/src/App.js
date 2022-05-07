@@ -11,7 +11,7 @@ const truncate = (input, len) =>
   input.length > len ? `${input.substring(0, len)}...` : input;
 
 const faqData = {
-    title: "FAQ (How it works)",
+    // title: "FAQ (How it works)",
     rows: [
         {
             title: "Lorem ipsum dolor sit amet,",
@@ -494,6 +494,7 @@ function App() {
         </s.Container>
         <s.SpacerLarge />
         <s.SpacerLarge />
+        <s.SpacerLarge />
         <s.Container>
           <ResponsiveWrapper>
                 <s.Container flex={1}>
@@ -503,26 +504,45 @@ function App() {
                   <StyledSectionHeading>
                       What do you get?
                   </StyledSectionHeading>
-                  <s.TextTitle>
-                    What do you get?
-                  </s.TextTitle>
+                  <s.SpacerMedium />
+                  <s.TextDescription>
+                    <ul class="whatYouGetList">
+                      <li>You get a unique Lord Ganesha NFT that may bring good luck to your Crypto journey!</li>
+                      <li>If you are an early adopter, you have the potential to sell it at a higher price.</li>
+                      <li>A chance to play skill and luck based games (like Laddu auctions) that we plan to build in the near future</li>
+                      <li>People traditionally kept Ganesha picture in their physical wallet for luck and prosperity. It's time to have one in your crypto wallet!</li>
+                      <li>When all 10,000 NFTs are minted, we will donate 20% of the amount for the welfare of elephants.</li>
+                    </ul>
+                  </s.TextDescription>
                 </s.Container>
             </ResponsiveWrapper>
         </s.Container>
         <s.SpacerLarge />
         <s.SpacerLarge />
+        <s.SpacerLarge />
         <s.Container>
           <ResponsiveWrapper>
                 <s.Container flex={1}>
-                    <h2>Team</h2>
-                    <s.Container>
-                      <s.Container>
-                        <img src="" />
-                        <h4>Phani</h4>
+                  <StyledSectionHeading style={{alignSelf:"center"}}>
+                      Team
+                  </StyledSectionHeading>
+                  <s.SpacerLarge />
+                    <s.Container fd="row" jc="center" style={{width:"50%", margin: "auto"}}>
+                      <s.Container flex="1" jc="center" ai="center">
+                        <img height="96" src="config/images/phani.jpg" />
+                        <s.SpacerSmall/>
+                        <h4>Phaniraj G</h4>
+                        <p>frontend developer</p>
+                        <s.SpacerXSmall/>
+                        <a href="https://www.linkedin.com/in/phaniraj-g-25147241/"><img height="16" src="config/images/linkedin.png" /></a>
                       </s.Container>
-                      <s.Container>
-                        <img src="" />
-                        <h4>Ravi</h4>
+                      <s.Container flex="1" ai="center" jc="center">
+                        <img height="96" src="config/images/ravi.jpg" />
+                        <s.SpacerSmall/>
+                        <h4>Raviteja G</h4>
+                        <p>UX designer</p>
+                        <s.SpacerXSmall/>
+                        <a href="https://www.linkedin.com/in/graviteja/"><img height="16" src="config/images/linkedin.png" /></a>
                       </s.Container>
                     </s.Container>
                 </s.Container>
@@ -530,7 +550,11 @@ function App() {
         </s.Container>
         <s.SpacerLarge />
         <s.SpacerLarge />
+        <s.SpacerLarge />
         <s.Container>
+          <StyledSectionHeading style={{alignSelf:"center"}}>
+              Frequently Asked Questions
+          </StyledSectionHeading>
           <ResponsiveWrapper>
                 <s.Container flex={1}>
                   <Faq data={faqData}/>
@@ -538,7 +562,7 @@ function App() {
             </ResponsiveWrapper>
         </s.Container>
         <s.SpacerMedium />
-        <s.Container>
+        <s.Container ai="center" style={{fontSize:11}}>
           <p>Some icons are taken from <a href="https://www.flaticon.com/" title="icons">Flaticon</a></p>
         </s.Container>
       </s.Container>

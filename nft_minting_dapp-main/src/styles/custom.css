@@ -7,6 +7,28 @@
     margin-bottom: 4px;
 }
 
+.whatYouGetList{
+    list-style: initial;
+    padding-left:24px;
+}
+
+.whatYouGetList li{
+    margin-bottom: 12px;
+}
+
+.faq-row {
+    border-bottom: 1px solid #efefef !important;
+}
+
+.faq-row .arrow-image{
+    opacity: 0.5;
+}
+
+.faq-row .row-content-text{
+    margin-top:10px;
+    margin-bottom:12px;
+}
+
 .carousel-five-images{
 	position: relative;
 }
