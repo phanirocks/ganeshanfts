@@ -30,7 +30,7 @@
 }
 
 .teamContainer {
-    width: 50%;
+    width: 50% !important;
     margin: auto;
     text-align: center;
 }
@@ -424,7 +424,7 @@
         text-align: center;
     }
     .mintSchedule{
-        flex-direction: column;
+        flex-direction: column !important;
     }
     .carousel-five-images img{
         width: 100%;
@@ -435,6 +435,6 @@
         height: auto;
     }
     .teamContainer{
-        width: 100%;
+        width: 100% !important;
     }
 }
