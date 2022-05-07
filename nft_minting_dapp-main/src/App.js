@@ -94,6 +94,9 @@ export const ResponsiveWrapper = styled.div`
   @media (min-width: 767px) {
     flex-direction: row;
   }
+  @media (max-width: 980px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 export const StyledLogo = styled.img`
@@ -144,6 +147,10 @@ export const MintContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
+  @media (max-width:980px){
+    margin-top: 12px;
+    margin-bottom: 16px;
+  }
 `;
 
 export const MintRange = styled.h3`
@@ -264,7 +271,7 @@ function App() {
       >
         <s.Container>
           <StyledLogo src="config/images/logo.png" />
-          <ResponsiveWrapper flex={1} style={{ alignItems: "flex-start" }} >
+          <ResponsiveWrapper className="heroContainer" flex={1} style={{ alignItems: "flex-start" }} >
             <s.Container flex={1}>
               <StyledTitle>
                 Goodluck Ganeshas
@@ -454,7 +461,7 @@ function App() {
           </ResponsiveWrapper>
         </s.Container>
         <s.SpacerLarge />
-        <s.Container fd={"row"} ai={"center"}>
+        <s.Container className="mintSchedule" ai={"center"}>
           <h2 class="mintingTitle">
             Minting Schedule:
           </h2>
@@ -489,7 +496,9 @@ function App() {
             </MintContainer> 
           </s.Container>
           <s.Container  flex={1} ai={"center"}>
-             <img class="moonImage" src="https://cdn-icons-png.flaticon.com/512/619/619054.png" /> To the Moon
+             <img class="moonImage" src="https://cdn-icons-png.flaticon.com/512/619/619054.png" />
+             <s.SpacerXSmall />
+             To the Moon
           </s.Container>
         </s.Container>
         <s.SpacerLarge />
@@ -527,12 +536,13 @@ function App() {
                       Team
                   </StyledSectionHeading>
                   <s.SpacerLarge />
-                    <s.Container fd="row" jc="center" style={{width:"50%", margin: "auto"}}>
+                    <s.Container fd="row" jc="center" className="teamContainer">
                       <s.Container flex="1" jc="center" ai="center">
                         <img height="96" src="config/images/phani.jpg" />
                         <s.SpacerSmall/>
                         <h4>Phaniraj G</h4>
-                        <p>frontend developer</p>
+                        <s.SpacerXSmall/>
+                        <p>Frontend developer</p>
                         <s.SpacerXSmall/>
                         <a href="https://www.linkedin.com/in/phaniraj-g-25147241/"><img height="16" src="config/images/linkedin.png" /></a>
                       </s.Container>
@@ -540,6 +550,7 @@ function App() {
                         <img height="96" src="config/images/ravi.jpg" />
                         <s.SpacerSmall/>
                         <h4>Raviteja G</h4>
+                        <s.SpacerXSmall/>
                         <p>UX designer</p>
                         <s.SpacerXSmall/>
                         <a href="https://www.linkedin.com/in/graviteja/"><img height="16" src="config/images/linkedin.png" /></a>

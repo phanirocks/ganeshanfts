@@ -29,6 +29,16 @@
     margin-bottom:12px;
 }
 
+.teamContainer {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.mintSchedule{
+    flex-direction: row !important;
+}
+
 .carousel-five-images{
 	position: relative;
 }
@@ -407,3 +417,24 @@
 
 
 
+
+@media (max-width:980px){
+    .heroContainer {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .mintSchedule{
+        flex-direction: column;
+    }
+    .carousel-five-images img{
+        width: 100%;
+        height: auto;
+    }
+    .sixGaneshas{
+        width: 100%;
+        height: auto;
+    }
+    .teamContainer{
+        width: 100%;
+    }
+}
