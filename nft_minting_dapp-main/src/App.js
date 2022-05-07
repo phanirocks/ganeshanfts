@@ -129,6 +129,33 @@ export const StyledTitle = styled.h1`
   margin-bottom: 12px;
 `;
 
+export const StyledSectionHeading = styled.h2`
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 12px;
+`;
+
+export const MintContainer = styled.div`
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #f6f6f6;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+`;
+
+export const MintRange = styled.h3`
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 8px;
+`;
+
+export const MintCost = styled.h4`
+  font-size: 16px;
+`;
+
 function App() {
   const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
@@ -427,42 +454,42 @@ function App() {
           </ResponsiveWrapper>
         </s.Container>
         <s.SpacerLarge />
-        <s.Container style={{flexDirection:"row"}} ai={"center"}>
+        <s.Container fd={"row"} ai={"center"}>
           <h2 class="mintingTitle">
             Minting Schedule:
           </h2>
           <s.Container flex={1} ai={"center"}>
-            <s.Container>
-              <h3>1-500</h3>
-              <h4>Free</h4>
-            </s.Container>
+            <MintContainer>
+              <MintRange>1-100</MintRange>
+              <MintCost>Free</MintCost>
+            </MintContainer>
           </s.Container>
           <s.Container  flex={1} ai={"center"}>
-            <s.Container>
-            <h3>501-2000</h3>
-            <h4>0.005 ETH</h4>
-            </s.Container>
+            <MintContainer>
+              <MintRange>101-1000</MintRange>
+              <MintCost>0.005 ETH</MintCost>
+            </MintContainer>
           </s.Container>
           <s.Container  flex={1} ai={"center"}>
-          <s.Container>
-          <h3>2001-5000</h3>
-            <h4>0.01 ETH</h4>
-              </s.Container>
-
+            <MintContainer>
+              <MintRange>1001-5000</MintRange>
+              <MintCost>0.01 ETH</MintCost>
+            </MintContainer>
           </s.Container>
           <s.Container  flex={1} ai={"center"}>
-          <s.Container>
-          <h3>5001-9000</h3>
-            <h4>0.05 ETH</h4>
-              </s.Container>
-            
+            <MintContainer>
+              <MintRange>5001-9000</MintRange>
+              <MintCost>0.05 ETH</MintCost>
+            </MintContainer>
           </s.Container>
           <s.Container  flex={1} ai={"center"}>
-          <s.Container>
-          <h3>9001-10000</h3>
-            <h4>0.2 ETH</h4>
-              </s.Container>
-              
+            <MintContainer>
+              <MintRange>9001-10000</MintRange>
+              <MintCost>0.1 ETH</MintCost>
+            </MintContainer> 
+          </s.Container>
+          <s.Container  flex={1} ai={"center"}>
+             <img class="moonImage" src="https://cdn-icons-png.flaticon.com/512/619/619054.png" /> To the Moon
           </s.Container>
         </s.Container>
         <s.SpacerLarge />
@@ -473,7 +500,12 @@ function App() {
                   <img class="sixGaneshas" src="/config/images/6 ganeshas.png" />
                 </s.Container>
                 <s.Container flex={1}>
-                  Roadmap shit
+                  <StyledSectionHeading>
+                      What do you get?
+                  </StyledSectionHeading>
+                  <s.TextTitle>
+                    What do you get?
+                  </s.TextTitle>
                 </s.Container>
             </ResponsiveWrapper>
         </s.Container>
@@ -506,6 +538,9 @@ function App() {
             </ResponsiveWrapper>
         </s.Container>
         <s.SpacerMedium />
+        <s.Container>
+          <p>Some icons are taken from <a href="https://www.flaticon.com/" title="icons">Flaticon</a></p>
+        </s.Container>
       </s.Container>
     </s.Screen>
   );

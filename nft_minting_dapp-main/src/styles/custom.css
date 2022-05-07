@@ -2,6 +2,11 @@
     height: 360px;
 }
 
+.moonImage{
+    height: 36px;
+    margin-bottom: 4px;
+}
+
 .carousel-five-images{
 	position: relative;
 }
