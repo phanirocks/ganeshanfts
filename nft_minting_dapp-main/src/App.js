@@ -516,8 +516,8 @@ function App() {
                   <s.SpacerMedium />
                   <s.TextDescription>
                     <ul class="whatYouGetList">
-                      <li>You get a unique Lord Ganesha NFT that may bring good luck to your Crypto journey!</li>
-                      <li>If you are an early adopter, you have the potential to sell it at a higher price.</li>
+                      <li>You get a unique Lord Ganesha NFT that may bring <b>good luck</b> to your Crypto journey!</li>
+                      <li>If you are an early adopter, you have the potential to sell it at a higher price. Get luckier when your NFT contains a <b>laddu</b></li>
                       <li>A chance to play skill and luck based games (like Laddu auctions) that we plan to build in the near future</li>
                       <li>People traditionally kept Ganesha picture in their physical wallet for luck and prosperity. It's time to have one in your crypto wallet!</li>
                       <li>When all 10,000 NFTs are minted, we will donate 20% of the amount for the welfare of elephants.</li>
