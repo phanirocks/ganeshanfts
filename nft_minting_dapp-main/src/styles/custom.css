@@ -16,6 +16,14 @@
     margin-bottom: 12px;
 }
 
+.whyGanesha {
+    width: 70% !important;
+    margin: auto;
+    background: #f3f3f3;
+    padding: 36px;
+    border-radius: 8px;
+}
+
 .faq-row {
     border-bottom: 1px solid #efefef !important;
 }
@@ -449,6 +457,12 @@
     .sixGaneshas{
         width: 100%;
         height: auto;
+    }
+    .whyGanesha{
+        width: 100% !important;
+    }
+    .whyGanesha div {
+        margin-bottom: 20px;
     }
     .teamContainer{
         width: 100% !important;

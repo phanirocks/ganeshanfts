@@ -563,20 +563,20 @@ function App() {
         <s.Container>
           <s.Container flex={1}>
             <StyledSectionHeading style={{alignSelf:"center"}}>
-              Why Ganesha?
+              Why Lord Ganesha?
             </StyledSectionHeading>
-            <s.Container>
-            Prosperity, happiness and good health are the three main components of a peaceful life.
-            Lord Ganesha among the various powerful Hindu Gods is said to be the god of prosperity and wealth. He is known by many different names such as Vinayaka, Pillayar, Lambodara, etc.
-            Lord Ganesha is believed to bring good luck and thus he is worshipped before anything new is started.
-            Ganesha idols and statues are of great significance to people around the world and thus are in great demand.
-            Apart from devotees, art collectors love the paintings and idols of Lord Ganesha as well.
-            Overall you can say, Lord Ganesha artwork is always in a demand around the world.
-            Ganesha symbolizes wisdom, understanding, and a discriminating intellect that one must possess to attain perfection in life.
-            </s.Container>
-            <s.Container>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Ganesha_-_Gupta_Period_-_ACCN_15-758_-_Government_Museum_-_Mathura_2013-02-23_5418.JPG/255px-Ganesha_-_Gupta_Period_-_ACCN_15-758_-_Government_Museum_-_Mathura_2013-02-23_5418.JPG" />
-            </s.Container>
+            <s.SpacerLarge />
+            <ResponsiveWrapper className="whyGanesha">
+              <s.Container flex="1" ai="center">
+                <img src="config/images/hidden.png" height="264" />
+              </s.Container>
+              <s.Container flex="1" style={{lineHeight: 1.5}}>
+              Lord Ganesha, also known by many names - Ganapti, Vinayaka, Lambodara, Pillayar etc. is said to be the God of luck, intellect, prosperity, wisdom and new beginnings; remover of obstacles - i.e. everything you need in the Crypto world.
+              <br /><br />
+              Lord Ganesha is believed to bring good luck and thus he is worshipped before anything new is started. Around the world, Ganesha idols and art are always in great demand. People (not just the devotees but art collectors and the like) maintain collections of these in their almirahs, cupboards and TV stands.
+              May this Ganesha NFT bring you Prosperity, happiness, good health and that little bit of missing luck in your Crypto Wallet!
+              </s.Container>
+            </ResponsiveWrapper>
           </s.Container>
         </s.Container>
         <s.SpacerLarge />
