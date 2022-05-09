@@ -14,28 +14,34 @@ const faqData = {
     // title: "FAQ (How it works)",
     rows: [
         {
-            title: "Lorem ipsum dolor sit amet,",
-            content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean vel turpis feugiat,
-              ultricies metus at, consequat velit. Curabitur est nibh, varius in tellus nec, mattis pulvinar metus.
-              In maximus cursus lorem, nec laoreet velit eleifend vel. Ut aliquet mauris tortor, sed egestas libero interdum vitae.
-              Fusce sed commodo purus, at tempus turpis.`,
+            title: "Which blockchain network is this collection on?",
+            content: `Goodluck Ganeshas collection is on the Polygon blockchain.`,
         },
         {
-            title: "Nunc maximus, magna at ultricies elementum",
+            title: "Why Polygon?",
             content:
-                "Nunc maximus, magna at ultricies elementum, risus turpis vulputate quam, vitae convallis ex tortor sed dolor.",
+                "Buying NFTs on Polygon network has negligible transaction fee, unlike Ethereum network where you'll need to pay a lot of Fee (called GAS). We want to support wide-spread adoption of this network.",
         },
         {
-            title: "Curabitur laoreet, mauris vel blandit fringilla",
-            content: `Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc, ac sagittis leo elit vel lorem.
-            Fusce tempor lacus ut libero posuere viverra. Nunc velit dolor, tincidunt at varius vel, laoreet vel quam.
-            Sed dolor urna, lobortis in arcu auctor, tincidunt mattis ante. Vivamus venenatis ultricies nibh in volutpat.
-            Cras eu metus quis leo vestibulum feugiat nec sagittis lacus.Mauris vulputate arcu sed massa euismod dignissim. `,
+          title: "I don't see Polygon network on Metamask wallet",
+          content: `By default, you may not see Polygon network on Metamask. All you need to do is simply add the network. Refer to <a href="https://docs.polygon.technology/docs/develop/metamask/config-polygon-on-metamask/" target="_blank">Polygon documentation here.</a>`
         },
         {
-            title: "What is the package version",
-            content: <p>current version is 1.2.1</p>,
+            title: "Why should I buy this Ganesha NFT?",
+            content: `Traditionally, it is strongly believed that Lord Ganesha brings good luck, wealth and prosperity. Any new beginning starts with a Ganesh pooja. People also make different forms of Ganesha statues and art work. Why not have a digital version that's uniquely yours?! Also, aren't they cute?`,
         },
+        {
+          title: "How many Goodluck Ganesha NFTs are there?",
+          content: `There are exactly 10,000 unique Goodluck Ganesha NFTs on the Polygon blockchain. When you mint one, you will get a unique piece.`,
+        },
+        {
+          title: "Are there rare Ganeshas?",
+          content: `Absolutely! Goodluck Ganesha NFTs are made up of a lot of traits of which some are very rare. For e.g., a large laddu, a bitcoin necklace, king crown etc. Apart from these, out of 10,000, there are 1000 Silver and 500 Golden Ganeshas. If you get any of these, consider yourself extremely lucky!`,
+        },
+        {
+          title: "Whom should I contact if I have any concerns or issues?",
+          content: `Reach out to us on ganeshnfts@gmail.com`
+        }
     ],
 };
 
@@ -295,7 +301,7 @@ function App() {
               <StyledTitle>
                 Goodluck Ganeshas
               </StyledTitle>
-              <h3 style={{fontSize: 14, fontWeight: "normal", fontStyle: "italic"}}>"Ganesha: The God of Wisdom, New Beginnings, and Luck, Remover of Obstacles"</h3>
+              <h3 style={{fontSize: 14, fontWeight: "normal", lineHeight: 1.5, fontStyle: "italic"}}>"Ganesha: The God of Wisdom, New Beginnings, and Luck, Remover of Obstacles"</h3>
               <s.SpacerSmall />
               <s.TextDescription
                   style={{
@@ -303,9 +309,7 @@ function App() {
                     color: "var(--primary-text)",
                   }}
                 >
-                    Start your web 3.0 journey with these cute Ganesha NFTs.
-                    It’s strongly believed in Hinduism that if you start any work with a Ganesh pooja,
-                    it’ll become a success.
+                    In Hinduism, it is strongly believed that starting any new journey with a Ganesh pooja will bring you all the luck to succeed. Now, start your Web3 journey with these cute Ganesha NFTs. 
               </s.TextDescription>
               <s.SpacerLarge />
               <s.Container
@@ -319,7 +323,7 @@ function App() {
             >
                 <s.TextTitle
                   style={{
-                    fontSize: 30,
+                    fontSize: 20,
                     fontWeight: "bold",
                   }}
                 >
@@ -335,7 +339,7 @@ function App() {
                     {truncate(CONFIG.CONTRACT_ADDRESS, 15)}
                   </StyledLink>
                 </s.TextDescription> */}
-                <s.SpacerSmall />
+                {/* <s.SpacerSmall /> */}
                 {Number(data.totalSupply) >= CONFIG.MAX_SUPPLY ? (
                   <>
                     <s.TextTitle>
@@ -360,15 +364,16 @@ function App() {
                     {blockchain.account === "" ||
                     blockchain.smartContract === null ? (
                       <s.Container>
-                        {/* <s.TextDescription
+                        <s.TextDescription
                           style={{
                             textAlign: "center",
-                            color: "var(--accent-text)",
+                            color: "#333",
+                            fontSize: 12,
                           }}
                         >
-                          Connect to the {CONFIG.NETWORK.NAME} network
-                        </s.TextDescription> */}
-                        {/* <s.SpacerSmall /> */}
+                          Connect to the {CONFIG.NETWORK.NAME} network on your Wallet to mint.
+                        </s.TextDescription>
+                        <s.SpacerSmall />
                         <StyledButton
                           onClick={(e) => {
                             e.preventDefault();
@@ -454,16 +459,16 @@ function App() {
             </s.Container>
             <s.Container style={{position:"relative"}} flex={1} jc={"center"} ai={"center"}>
               <div id="background-wrap">
-                <div class="x1"><img src="https://cdn-icons-png.flaticon.com/512/346/346167.png" /></div>
-                <div class="x2"><img src="https://cdn-icons-png.flaticon.com/512/3025/3025015.png" /></div>
-                <div class="x3"><img src="https://cdn-icons-png.flaticon.com/512/892/892917.png" /></div>
-                <div class="x4"><img src="https://cdn-icons-png.flaticon.com/512/3025/3025015.png" /></div>
-                <div class="x5"><img src="https://cdn-icons-png.flaticon.com/512/346/346167.png" /></div>
-                <div class="x6"><img src="https://cdn-icons-png.flaticon.com/512/346/346167.png" /></div>
-                <div class="x7"><img src="https://cdn-icons-png.flaticon.com/512/892/892917.png" /></div>
-                <div class="x8"><img src="https://cdn-icons-png.flaticon.com/512/3025/3025015.png" /></div>
-                <div class="x9"><img src="https://cdn-icons-png.flaticon.com/512/892/892917.png" /></div>
-                <div class="x10"><img src="https://cdn-icons-png.flaticon.com/512/346/346167.png" /></div>
+                <div class="x1"><img src="config/images/showering_flower_red.png" /></div>
+                <div class="x2"><img src="config/images/showering_flower_yellow.png" /></div>
+                <div class="x3"><img src="config/images/leaf.png" /></div>
+                <div class="x4"><img src="config/images/showering_flower_yellow.png" /></div>
+                <div class="x5"><img src="config/images/showering_flower_red.png" /></div>
+                <div class="x6"><img src="config/images/showering_flower_red.png" /></div>
+                <div class="x7"><img src="config/images/leaf.png" /></div>
+                <div class="x8"><img src="config/images/leaf.png"   /></div>
+                <div class="x9"><img src="config/images/showering_flower_yellow.png" /></div>
+                <div class="x10"><img src="config/images/showering_flower_red.png" /></div>
               </div>
               <div class="carousel-five-images center-block text-center">
                 <img src="/config/images/goodluck_ganesha_1.png" class="one img-responsive" />
@@ -511,7 +516,7 @@ function App() {
             </MintContainer> 
           </s.Container>
           <s.Container  flex={1} ai={"center"}>
-             <img class="moonImage" src="https://cdn-icons-png.flaticon.com/512/619/619054.png" />
+             <img class="moonImage" src="config/images/rocket.png" />
              <s.SpacerXSmall />
              To the Moon
           </s.Container>
@@ -541,10 +546,32 @@ function App() {
                 </s.Container>
             </ResponsiveWrapper>
         </s.Container>
+        {/* <s.SpacerLarge />
         <s.SpacerLarge />
+        <s.SpacerLarge /> */}
+        {/* <s.Container>
+          <s.Container flex={1}>
+            <StyledSectionHeading style={{alignSelf:"center"}}>
+              Why Ganesha?
+            </StyledSectionHeading>
+            <s.Container>
+            Prosperity, happiness and good health are the three main components of a peaceful life.
+            Lord Ganesha among the various powerful Hindu Gods is said to be the god of prosperity and wealth. He is known by many different names such as Vinayaka, Pillayar, Lambodara, etc.
+            Lord Ganesha is believed to bring good luck and thus he is worshipped before anything new is started.
+            Ganesha idols and statues are of great significance to people around the world and thus are in great demand.
+            Apart from devotees, art collectors love the paintings and idols of Lord Ganesha as well.
+            Overall you can say, Lord Ganesha artwork is always in a demand around the world.
+            Ganesha symbolizes wisdom, understanding, and a discriminating intellect that one must possess to attain perfection in life.
+            </s.Container>
+            <s.Container>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Ganesha_-_Gupta_Period_-_ACCN_15-758_-_Government_Museum_-_Mathura_2013-02-23_5418.JPG/255px-Ganesha_-_Gupta_Period_-_ACCN_15-758_-_Government_Museum_-_Mathura_2013-02-23_5418.JPG" />
+            </s.Container>
+          </s.Container>
+        </s.Container> */}
+        {/* <s.SpacerLarge />
         <s.SpacerLarge />
-        <s.SpacerLarge />
-        <s.Container>
+        <s.SpacerLarge /> */}
+        {/* <s.Container>
           <ResponsiveWrapper>
                 <s.Container flex={1}>
                   <StyledSectionHeading style={{alignSelf:"center"}}>
@@ -573,7 +600,7 @@ function App() {
                     </s.Container>
                 </s.Container>
             </ResponsiveWrapper>
-        </s.Container>
+        </s.Container> */}
         <s.SpacerLarge />
         <s.SpacerLarge />
         <s.SpacerLarge />
@@ -588,8 +615,13 @@ function App() {
             </ResponsiveWrapper>
         </s.Container>
         <s.SpacerMedium />
-        <s.Container ai="center" style={{fontSize:11}}>
-          <p>Some icons are taken from <a href="https://www.flaticon.com/" title="icons">Flaticon</a></p>
+        <s.Container ai="center" fd="row" jc="center">
+          <a href="https://instagram.com/goodluckganeshas" style={{textDecoration:"none"}}>
+            <s.Container className="instagramCTA" fd="row" ai="center"><img src="config/images/instagram.png" height="20" style={{marginRight: 8}} />Instagram</s.Container>
+          </a>
+        </s.Container>
+        <s.Container ai="center" style={{marginTop:20}}>
+          <p style={{fontSize:11}}>Some icons are taken from <a href="https://www.flaticon.com/" title="icons">Flaticon</a></p>
         </s.Container>
       </s.Container>
     </s.Screen>

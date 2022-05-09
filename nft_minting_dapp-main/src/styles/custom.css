@@ -28,6 +28,16 @@
     color:#787878 !important;
     margin-top:10px;
     margin-bottom:12px;
+    line-height: 1.3;
+}
+
+.instagramCTA{
+    border-radius: 8px;
+    padding: 16px;
+    color: white;
+    background: rgb(237,142,31);
+    font-weight: bold;
+    /* background: linear-gradient(315deg, rgba(237,142,31,1) 0%, rgba(230,104,60,1) 25%, rgba(220,39,67,1) 50%, rgba(204,35,102,1) 75%, rgba(188,24,136,1) 100%); */
 }
 
 .teamContainer {
