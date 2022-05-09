@@ -209,7 +209,6 @@ function App() {
 
   const claimNFTs = () => {
     let cost = fetchCost();
-    alert(cost);
     let gasLimit = CONFIG.GAS_LIMIT;
     let totalCostWei = String(cost * mintAmount);
     let totalGasLimit = String(gasLimit * mintAmount);
@@ -490,25 +489,25 @@ function App() {
           <s.Container  flex={1} ai={"center"}>
             <MintContainer>
               <MintRange>101-1000</MintRange>
-              <MintCost>0.005 ETH</MintCost>
+              <MintCost>13 MATIC</MintCost>
             </MintContainer>
           </s.Container>
           <s.Container  flex={1} ai={"center"}>
             <MintContainer>
               <MintRange>1001-5000</MintRange>
-              <MintCost>0.01 ETH</MintCost>
+              <MintCost>26 MATIC</MintCost>
             </MintContainer>
           </s.Container>
           <s.Container  flex={1} ai={"center"}>
             <MintContainer>
               <MintRange>5001-9000</MintRange>
-              <MintCost>0.05 ETH</MintCost>
+              <MintCost>130 MATIC</MintCost>
             </MintContainer>
           </s.Container>
           <s.Container  flex={1} ai={"center"}>
             <MintContainer>
               <MintRange>9001-10000</MintRange>
-              <MintCost>0.1 ETH</MintCost>
+              <MintCost>260 MATIC</MintCost>
             </MintContainer> 
           </s.Container>
           <s.Container  flex={1} ai={"center"}>
