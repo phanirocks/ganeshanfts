@@ -51,6 +51,9 @@ export const TextTitle = styled.p`
   font-size: 16px;
   font-weight: 500;
   line-height: 1.2;
+  @media (max-width:980px) {
+    align-self: center;
+  }
 `;
 
 export const TextSubTitle = styled.p`

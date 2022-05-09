@@ -39,6 +39,10 @@ const faqData = {
           content: `Absolutely! Goodluck Ganesha NFTs are made up of a lot of traits of which some are very rare. For e.g., a large laddu, a bitcoin necklace, king crown etc. Apart from these, out of 10,000, there are 1000 Silver and 500 Golden Ganeshas. If you get any of these, consider yourself extremely lucky!`,
         },
         {
+          title: "Who is the team?",
+          content: `We are Phani & Ravi, brothers and crypto/web3 enthusiasts. We come with a combined experience of 20+ yrs in software development and UX design.`
+        },
+        {
           title: "Whom should I contact if I have any concerns or issues?",
           content: `Reach out to us on ganeshnfts@gmail.com`
         }
@@ -62,6 +66,9 @@ export const StyledButton = styled.button`
   :hover {
     box-shadow: 0px 8px 12px rgba(219,132,27,0.3);
     transition: 200ms;
+  }
+  @media (max-width:980px){
+    width: 100%;
   }
 `;
 
@@ -142,6 +149,10 @@ export const StyledSectionHeading = styled.h2`
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 12px;
+  @media (max-width:980px){
+    align-self: center;
+    text-align: center;
+  }
 `;
 
 export const MintContainer = styled.div`
@@ -546,10 +557,10 @@ function App() {
                 </s.Container>
             </ResponsiveWrapper>
         </s.Container>
-        {/* <s.SpacerLarge />
         <s.SpacerLarge />
-        <s.SpacerLarge /> */}
-        {/* <s.Container>
+        <s.SpacerLarge />
+        <s.SpacerLarge />
+        <s.Container>
           <s.Container flex={1}>
             <StyledSectionHeading style={{alignSelf:"center"}}>
               Why Ganesha?
@@ -567,10 +578,10 @@ function App() {
               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Ganesha_-_Gupta_Period_-_ACCN_15-758_-_Government_Museum_-_Mathura_2013-02-23_5418.JPG/255px-Ganesha_-_Gupta_Period_-_ACCN_15-758_-_Government_Museum_-_Mathura_2013-02-23_5418.JPG" />
             </s.Container>
           </s.Container>
-        </s.Container> */}
-        {/* <s.SpacerLarge />
+        </s.Container>
         <s.SpacerLarge />
-        <s.SpacerLarge /> */}
+        <s.SpacerLarge />
+        <s.SpacerLarge />
         {/* <s.Container>
           <ResponsiveWrapper>
                 <s.Container flex={1}>
@@ -605,7 +616,7 @@ function App() {
         <s.SpacerLarge />
         <s.SpacerLarge />
         <s.Container>
-          <StyledSectionHeading style={{alignSelf:"center"}}>
+          <StyledSectionHeading>
               Frequently Asked Questions
           </StyledSectionHeading>
           <ResponsiveWrapper>

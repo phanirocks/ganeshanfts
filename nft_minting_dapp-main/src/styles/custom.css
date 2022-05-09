@@ -119,11 +119,16 @@
 	right: 0;
 	top: 0;
 	z-index: 10;
+    overflow: hidden;
 }
 
 #background-wrap img{
     height: 36px;
 }
+
+/* .x1, .x2, .x3, .x4, .x5, .x6, .x7, .x8, .x9, .x10 {
+    width: fit-content;
+} */
 
 /* KEYFRAMES */
 
