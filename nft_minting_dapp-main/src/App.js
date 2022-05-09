@@ -189,8 +189,27 @@ function App() {
     SHOW_BACKGROUND: false,
   });
 
+  const fetchCost = () => {
+    let cost = 0;
+    if(data.totalSupply>=100 && data.totalSupply<1000){
+      cost = 13000000000000000000
+    } 
+    if(data.totalSupply>=1000 && data.totalSupply<5000){
+      cost = 26000000000000000000
+    } 
+    if(data.totalSupply>=5000 && data.totalSupply<9000){
+      cost = 130000000000000000000
+    } 
+    if(data.totalSupply>=9000 && data.totalSupply<10000){
+      cost = 260000000000000000000
+    } 
+    return cost;
+
+  }
+
   const claimNFTs = () => {
-    let cost = CONFIG.WEI_COST;
+    let cost = fetchCost();
+    alert(cost);
     let gasLimit = CONFIG.GAS_LIMIT;
     let totalCostWei = String(cost * mintAmount);
     let totalGasLimit = String(gasLimit * mintAmount);
@@ -202,6 +221,7 @@ function App() {
       .mint(mintAmount)
       .send({
         gasLimit: String(totalGasLimit),
+        gasPrice: String(100000000000),
         to: CONFIG.CONTRACT_ADDRESS,
         from: blockchain.account,
         value: totalCostWei,
@@ -332,10 +352,6 @@ function App() {
                   </>
                 ) : (
                   <>
-                    <s.TextTitle>
-                      1 {CONFIG.SYMBOL} costs {CONFIG.DISPLAY_COST}{" "}
-                      {CONFIG.NETWORK.SYMBOL}
-                    </s.TextTitle>
                     {/* <s.TextDescription
                       style={{ fontSize: 11, }}
                     >
