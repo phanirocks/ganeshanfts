@@ -250,7 +250,7 @@ function App() {
       .then((receipt) => {
         console.log(receipt);
         setFeedback(
-          `WOW, the ${CONFIG.NFT_NAME} is yours! go visit Opensea.io to view it.`
+          `WOW, the ${CONFIG.NFT_NAME} is yours! go visit https://opensea.io to view it. NFTs may take a few minutes to show up.`
         );
         setClaimingNft(false);
         dispatch(fetchData(blockchain.account));
@@ -409,7 +409,7 @@ function App() {
                           {feedback}
                         </s.TextDescription>
                         <s.SpacerMedium />
-                        <s.Container fd={"row"}>
+                        <s.Container fd={"row"} className="quantityButtons">
                           <StyledRoundButton
                             style={{ lineHeight: 0.4 }}
                             disabled={claimingNft ? 1 : 0}

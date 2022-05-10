@@ -457,6 +457,9 @@
         flex-direction: column-reverse;
         text-align: center;
     }
+    .quantityButtons{
+        justify-content: center !important;
+    }
     .mintSchedule{
         flex-direction: column !important;
     }
