@@ -371,7 +371,7 @@ function App() {
                     >
                       (excluding gas fees)
                     </s.TextDescription> */}
-                    <s.SpacerSmall />
+                    {/* <s.SpacerSmall /> */}
                     {blockchain.account === "" ||
                     blockchain.smartContract === null ? (
                       <s.Container>
@@ -579,9 +579,9 @@ function App() {
             </ResponsiveWrapper>
           </s.Container>
         </s.Container>
+        {/* <s.SpacerLarge />
         <s.SpacerLarge />
-        <s.SpacerLarge />
-        <s.SpacerLarge />
+        <s.SpacerLarge /> */}
         {/* <s.Container>
           <ResponsiveWrapper>
                 <s.Container flex={1}>
@@ -619,6 +619,7 @@ function App() {
           <StyledSectionHeading>
               Frequently Asked Questions
           </StyledSectionHeading>
+          <s.SpacerMedium />
           <ResponsiveWrapper>
                 <s.Container flex={1}>
                   <Faq data={faqData}/>
