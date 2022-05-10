@@ -631,6 +631,10 @@ function App() {
           <a href="https://instagram.com/goodluckganeshas" style={{textDecoration:"none"}}>
             <s.Container className="instagramCTA" fd="row" ai="center"><img src="config/images/instagram.png" height="20" style={{marginRight: 8}} />Instagram</s.Container>
           </a>
+          <s.SpacerLarge/>
+          <a href="https://discord.gg/MgPChse7" style={{textDecoration:"none"}}>
+            <s.Container className="discordCTA" fd="row" ai="center"><img src="config/images/discord.png" height="20" style={{marginRight: 8}} />Discord</s.Container>
+          </a>
         </s.Container>
         <s.Container ai="center" style={{marginTop:20}}>
           <p style={{fontSize:11}}>Some icons are taken from <a href="https://www.flaticon.com/" title="icons">Flaticon</a></p>

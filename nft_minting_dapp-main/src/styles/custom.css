@@ -48,6 +48,14 @@
     /* background: linear-gradient(315deg, rgba(237,142,31,1) 0%, rgba(230,104,60,1) 25%, rgba(220,39,67,1) 50%, rgba(204,35,102,1) 75%, rgba(188,24,136,1) 100%); */
 }
 
+.discordCTA{
+    background:#5865F2;
+    border-radius: 8px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+}
+
 .teamContainer {
     width: 50% !important;
     margin: auto;
