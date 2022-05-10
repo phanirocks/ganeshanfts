@@ -571,7 +571,7 @@ function App() {
                 <img src="config/images/hidden.png" height="264" />
               </s.Container>
               <s.Container flex="1" style={{lineHeight: 1.5}}>
-              Lord Ganesha, also known by many names - Ganapti, Vinayaka, Lambodara, Pillayar etc. is said to be the God of luck, intellect, prosperity, wisdom and new beginnings; remover of obstacles - i.e. everything you need in the Crypto world.
+              Lord Ganesha, also known by many names - Ganapati, Vinayaka, Lambodara, Pillayar etc. is said to be the God of luck, intellect, prosperity, wisdom and new beginnings; remover of obstacles - i.e. everything you need in the Crypto world.
               <br /><br />
               Lord Ganesha is believed to bring good luck and thus he is worshipped before anything new is started. Around the world, Ganesha idols and art are always in great demand. People (not just the devotees but art collectors and the like) maintain collections of these in their almirahs, cupboards and TV stands.
               May this Ganesha NFT bring you Prosperity, happiness, good health and that little bit of missing luck in your Crypto Wallet!
