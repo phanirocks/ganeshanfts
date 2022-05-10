@@ -56,6 +56,14 @@
     font-weight: bold;
 }
 
+.twitterCTA{
+    background:#00acee;
+    border-radius: 8px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+}
+
 .teamContainer {
     width: 50% !important;
     margin: auto;
@@ -479,5 +487,12 @@
     }
     .teamContainer{
         width: 100% !important;
+    }
+    .socialLinks {
+        flex-direction: column !important;
+    }
+    .socialLinks a, .instagramCTA,.twitterCTA,.discordCTA{
+        width: 100% !important;
+        justify-content: center !important;
     }
 }
