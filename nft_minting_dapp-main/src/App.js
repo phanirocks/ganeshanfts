@@ -332,14 +332,14 @@ function App() {
                 borderRadius: 8
               }}
             >
-                <s.TextTitle
+                {data.totalSupply ? <s.TextTitle
                   style={{
                     fontSize: 20,
                     fontWeight: "bold",
                   }}
                 >
                   {data.totalSupply} / {CONFIG.MAX_SUPPLY} minted
-                </s.TextTitle>
+                </s.TextTitle>:<></>}
                 {/* <s.TextDescription
                   style={{
                     textAlign: "center",
