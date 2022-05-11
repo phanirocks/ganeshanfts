@@ -23,6 +23,14 @@
     padding: 36px;
     border-radius: 8px;
 }
+.completedMintContainer{
+    background: #caefca !important;
+}
+.completedMint{
+    right: 4px;
+    top: 12px;
+    position: absolute;
+}
 
 .faq-row {
     border-bottom: 1px solid #efefef !important;

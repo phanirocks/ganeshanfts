@@ -42,10 +42,10 @@ const faqData = {
           title: "I minted a Ganesha but I don't see it anywhere.",
           content: `You'll find it on Opensea. Connect the wallet you used to mint the NFT on https://opensea.io It may take a few minutes for the NFT to show up.`
         },
-        {
-          title: "I minted a Ganesha but it is hidden?",
-          content: `We will reveal the Ganesha once 200 NFTs are minted.`
-        },
+        // {
+        //   title: "I minted a Ganesha but it is hidden?",
+        //   content: `We will reveal the Ganesha once 100 NFTs are minted.`
+        // },
         {
           title: "Who is the team?",
           content: `We are Phani & Ravi, brothers and crypto/web3 enthusiasts. We come with a combined experience of 20+ yrs in software development and UX design.`
@@ -172,6 +172,7 @@ export const MintContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
+  position: relative;
   @media (max-width:980px){
     margin-top: 12px;
     margin-bottom: 16px;
@@ -505,9 +506,10 @@ function App() {
             Minting Schedule:
           </h2>
           <s.Container flex={1} ai={"center"}>
-            <MintContainer>
+            <MintContainer className="completedMintContainer">
               <MintRange>1-100</MintRange>
               <MintCost>Free</MintCost>
+              <div className="completedMint"><img src="config/images/done.png" height="24" /></div>
             </MintContainer>
           </s.Container>
           <s.Container  flex={1} ai={"center"}>
