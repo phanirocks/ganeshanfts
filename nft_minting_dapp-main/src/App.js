@@ -39,6 +39,14 @@ const faqData = {
           content: `Absolutely! Goodluck Ganesha NFTs are made up of a lot of traits of which some are very rare. For e.g., a large laddu, a bitcoin necklace, king crown etc. Apart from these, out of 10,000, there are 1000 Silver and 500 Golden Ganeshas. If you get any of these, consider yourself extremely lucky!`,
         },
         {
+          title: "I minted a Ganesha but I don't see it anywhere.",
+          content: `You'll find it on Opensea. Connect the wallet you used to mint the NFT on https://opensea.io It may take a few minutes for the NFT to show up.`
+        },
+        {
+          title: "I minted a Ganesha but it is hidden?",
+          content: `We will reveal the Ganesha once 200 NFTs are minted.`
+        },
+        {
           title: "Who is the team?",
           content: `We are Phani & Ravi, brothers and crypto/web3 enthusiasts. We come with a combined experience of 20+ yrs in software development and UX design.`
         },
